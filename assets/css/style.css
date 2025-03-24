@@ -14,12 +14,13 @@ html, body {
 .container {
   height: 100vh;
   display: grid;
-  grid-template-columns: 300px 1fr;
-  grid-template-rows: auto 1fr auto;
   grid-template-areas: 
     "sidebar header"
     "sidebar main"
     "footer main";
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto 1fr auto;
+  
 }
 
 .sidebar {
@@ -58,7 +59,7 @@ html, body {
   color: rgb(230, 225, 225);
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-in-out;
 }
 
 .sidebar-menu a:hover {
@@ -104,8 +105,6 @@ header .title-filter i {
 .header-filter .select-filter {
   width: 100%;
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   cursor: pointer;
   outline: none;
   padding: 10px 16px;
@@ -127,7 +126,6 @@ header .title-filter i {
 }
 
 .header-filter .select-container::after {
-  content: '';
   position: absolute;
   top: 50%;
   right: 16px;
@@ -138,6 +136,7 @@ header .title-filter i {
   border-right: 5px solid transparent;
   border-top: 6px solid #6b7280;
   pointer-events: none;
+  content: '';
 }
 
 
@@ -170,7 +169,7 @@ header .title-filter i {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 
 .main .products .product-card:hover {
@@ -211,7 +210,7 @@ header .title-filter i {
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .main .products .product-card .card-content button:hover {
@@ -242,7 +241,7 @@ header .title-filter i {
   text-decoration: none;
   border-radius: 4px;
   box-shadow: rgba(104, 102, 102, 0.3) 0px 2px 8px 0px;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .main .pagination .page-item:hover {
@@ -266,7 +265,7 @@ footer .footer-socials {
 footer .footer-socials a {
   font-size: 1.8rem;
   margin-bottom: 12px;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
   color: rgb(230, 225, 225);
 }
 
